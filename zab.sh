@@ -29,7 +29,7 @@ apt autoremove -y || echo "Failed to remove unnecessary packages."
 
 # Download key
 echo "Downloading Zabbly PPA key..."
-curl -fsSL https://pkgs.zabbly.com/key.asc > /tmp/zabbly.asc || (echo "Failed to download Zabbly PPA key. Check the URL or your internet connection." ; exit 1)
+sudo curl -fsSL https://pkgs.zabbly.com/key.asc > /tmp/zabbly.asc || (echo "Failed to download Zabbly PPA key. Check the URL or your internet connection." ; exit 1)
 
 # Verify fingerprint
 echo "Verifying key fingerprint..."
@@ -39,7 +39,7 @@ echo "Compare the fingerprint above with the official Zabbly documentation or a 
 read -p "Press Enter to continue verification (or Ctrl+C to abort): "
 
 # Import key if verification passes
-mv /tmp/zabbly.asc /etc/apt/keyrings/zabbly.asc || echo "Failed to move downloaded key to its designated location."
+sudo mv /tmp/zabbly.asc /etc/apt/keyrings/zabbly.asc || echo "Failed to move downloaded key to its designated location."
 
 # Create PPA source file (default to Debian suite)
 echo "Creating PPA source file..."
