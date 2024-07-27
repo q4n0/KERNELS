@@ -21,7 +21,7 @@ Make the Script Executable: Grant execute permissions using the following comman
     sudo chmod +x zab.sh
 
 Run the Script (with Caution): Execute the script from your terminal:
-    sudo ./install_mainline_kernel.sh
+    sudo ./zab.sh
 
     Important: Proceed with caution when installing a mainline kernel, as it can potentially introduce instability on your system. Thoroughly research and understand the risks involved before running the script.
 
